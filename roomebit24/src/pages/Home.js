@@ -1,4 +1,5 @@
 import Nav from '../components/Nav'
+import AuthModal from '../components/AuthModal'
 import { useState } from 'react'
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
     
     const handleClick = () => {
         console.log('clicked')
+        setShowModal(true)
     }
 
     return (
@@ -20,6 +22,11 @@ const Home = () => {
 
                 
             </button>
+
+            {showModal && (
+                <AuthModal setShowModal = {setShowModal}/>
+            )}
+
         </div>
         </div>
     )
