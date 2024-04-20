@@ -14,7 +14,7 @@ const Home = () => {
 
     return (
         <div className = "overlay">
-        <Nav authToken={authToken} setShowModal={setShowModal}/>
+        <Nav authToken={authToken} setShowModal={setShowModal} showModal={showModal}/>
         <div className = "home">
             <h1>ROOME</h1>
             <button className = "primary-button" onClick={handleClick}>
