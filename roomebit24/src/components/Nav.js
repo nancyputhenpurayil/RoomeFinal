@@ -1,8 +1,15 @@
-const Nav = () => {
+import logo from '../images/7081305.png'
+
+const Nav = ({authToken}) => {
+
     return (
-        <div>
-            Nav
-        </div>
+        <nav>
+            <div className="logo-container">
+                <img className="logo" src={logo}/>
+            </div>
+
+            {!authToken && <button className='nav-button'>Log in</button>}
+        </nav>
     )
 }
 export default Nav
