@@ -7,6 +7,7 @@ const ChatContainer = () => {
     return (
     
     <div className="chat-container">
+
         <ChatHeader/>
         
         <div>
