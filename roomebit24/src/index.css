@@ -249,16 +249,49 @@ nav .logo-container .logo {
 }
 
 .card {
+    background-color: #fff;
     width: 400px;
     height: 650px;
-    border-radius: 30px;
+    border-radius: 20px;
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Position content at the bottom */
 }
 
 .card h3 {
-    margin-top: 0;
+    margin: 0;
+    padding: 15px;
+    border-radius: 0 0 20px 20px; /* Rounded corners only at the bottom */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
 }
+
+.name {
+    margin: 0;
+    padding: 15px;
+    border-radius: 20px 20px 0 0; /* Rounded corners only at the top */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    transition: background-color 0.3s ease;
+}
+
+.card:hover .name {
+    background-color: transparent; /* Remove background color on hover */
+}
+
+.card:hover .carousel-info {
+    display: block; /* Show carousel info on hover */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 0 0 20px 20px; /* Rounded corners only at the bottom */
+    padding: 15px;
+    transition: background-color 0.3s ease;
+}
+
+
+.carousel-info {
+    display: none; /* Initially hide the carousel info */
+}
+
 
 .dashboard .swipe-info {
     position: absolute;

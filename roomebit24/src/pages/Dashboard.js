@@ -8,24 +8,34 @@ const Dashboard = () => {
 
     const characters = [
         {
-          name: 'Richard Hendricks',
+          name: 'Sydney Richman',
+          major: 'Immersive Media Design',
+          hobby: 'Art Projects',
           url: 'https://i.imgur.com/Q9WPlWA.jpeg'
         },
         {
-          name: 'Erlich Bachman',
-          url: 'https://news.umanitoba.ca/wp-content/uploads/2019/03/IMG_9991-1200x800.jpg'
+            name: 'Nancy Puthenpurayil',
+            major: 'Computer Science',
+            hobby: 'Playing Basketball',
+            url: 'https://i.imgur.com/Q9WPlWA.jpeg'
         },
         {
-          name: 'Monica Hall',
-          url: 'https://i.imgur.com/Q9WPlWA.jpeg'
+            name: 'Sania Rashid',
+            major: 'Computer Science',
+            hobby: 'Playing Chess',
+            url: 'https://i.imgur.com/Q9WPlWA.jpeg'
         },
         {
-          name: 'Jared Dunn',
-          url: 'https://i.imgur.com/Q9WPlWA.jpeg'
+            name: 'Jessica Parker',
+            major: 'Journalism',
+            hobby: 'Painting and Sculpting',
+            url: 'https://i.imgur.com/Q9WPlWA.jpeg'
         },
         {
-          name: 'Dinesh Chugtai',
-          url: 'https://i.imgur.com/Q9WPlWA.jpeg'
+            name: 'Samantha Stevens',
+            major: 'Computer Science',
+            hobby: 'Playing Basketball',
+            url: 'https://i.imgur.com/Q9WPlWA.jpeg'
         }
       ]
     const [lastDirection, setLastDirection] = useState()
@@ -52,10 +62,15 @@ const Dashboard = () => {
                     key={character.name} 
                     onSwipe={(dir) => swiped(dir, character.name)} 
                     onCardLeftScreen={() => outOfFrame(character.name)}>
-                        <div style={{ backgroundImage: 'url(' + character.url + ')' }} 
-                            className='card'
-                        ><h3>{character.name}</h3>
-                        </div>
+                <div style={{ backgroundImage: 'url(' + character.url + ')' }} className='card'>
+                    <h3 className="name">{character.name}</h3>
+                    <div className="carousel-info">
+                        <p>{character.major}</p>
+                        <p>{character.hobby}</p>
+                    </div>
+                </div>
+
+
                     </TinderCard>
                 )}
                 <div className="swipe-info">
