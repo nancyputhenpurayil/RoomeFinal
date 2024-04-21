@@ -1,5 +1,5 @@
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 const AuthModal = ({ setShowModal, isSignUp }) => {
 
     const [email, setEmail] = useState(null)
