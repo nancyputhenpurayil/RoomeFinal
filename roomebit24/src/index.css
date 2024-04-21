@@ -257,6 +257,39 @@ nav .logo-container .logo {
     bottom: 0;
     padding: 10px;
 }
+.swiper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .card-container {
+    position: relative;
+  }
+  
+  .swipe {
+    position: absolute;
+  }
+  
+  .card {
+    width: 300px; /* Adjust as needed */
+    height: 400px; /* Adjust as needed */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card h3 {
+    color: rgb(232, 61, 161);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 24px; /* Adjust as needed */
+  }
+
 
 /*-------- Chat Container --------*/
 .chat-container {
