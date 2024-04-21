@@ -4,6 +4,7 @@ import {useState} from 'react'
 
 const Home = () => {
     const [showModal, setShowModal] = useState(false)
+    const[isSignUp, setIsSignUp] = useState(true)
     
     const authToken = false
     
@@ -14,7 +15,11 @@ const Home = () => {
 
     return (
         <div className = "overlay">
-        <Nav authToken={authToken} setShowModal={setShowModal} showModal={showModal}/>
+        <Nav authToken={authToken} 
+        setShowModal={setShowModal} 
+        showModal={showModal}
+        setIsSignUp={setIsSignUp}
+        />
         <div className = "home">
             <h1>ROOME</h1>
             <button className = "primary-button" onClick={handleClick}>

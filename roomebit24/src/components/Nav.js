@@ -1,6 +1,6 @@
 import logo from '../images/7081305.png'
 
-const Nav = ({authToken, setShowModal, showModal}) => {
+const Nav = ({authToken, setShowModal, showModal, setIsSignUp}) => {
 
     const handleClick = () =>{
         setShowModal(true)
