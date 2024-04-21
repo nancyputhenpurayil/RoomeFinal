@@ -91,7 +91,6 @@ const Onboarding = () => {
                             />
                         </div>
 
-
                         <label>Gender</label>
                         <div className="multiple-input-container">
                             <input
