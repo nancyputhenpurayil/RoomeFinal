@@ -1,4 +1,4 @@
-import logo from '../images/7081305.png'
+import logo from '../images/roome (2).svg'
 import React from 'react'
 
 const Nav = ({ setShowModal, showModal, setIsSignUp}) => {
@@ -8,18 +8,18 @@ const Nav = ({ setShowModal, showModal, setIsSignUp}) => {
         setIsSignUp(false)
     }
 
-    const authToken = true
+    const authToken = false
     return (
         <nav>
             <div className="logo-container">
                 <img className="logo" src={logo}/>
             </div>
 
-            {!authToken && <button 
+            {!authToken && (<button 
             className="nav-button"
             onClick={handleClick}
             disabled={showModal}
-            >Log in</button>}
+            >Log in</button>)}
         </nav>
     )
 }
