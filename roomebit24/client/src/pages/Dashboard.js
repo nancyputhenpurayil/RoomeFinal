@@ -8,24 +8,34 @@ const Dashboard = () => {
 
     const characters = [
         {
-          name: 'Richard Hendricks',
-          url: './img/richard.jpg'
+          name: 'Sydney Richman',
+          major: 'Immersive Media Design',
+          hobby: 'Art Projects',
+          url: 'https://i.imgur.com/Q9WPlWA.jpeg'
         },
         {
-          name: 'Erlich Bachman',
-          url: './img/erlich.jpg'
+            name: 'Nancy Puthenpurayil',
+            major: 'Computer Science',
+            hobby: 'Playing Basketball',
+            url: 'https://i.imgur.com/Q9WPlWA.jpeg'
         },
         {
-          name: 'Monica Hall',
-          url: './img/monica.jpg'
+            name: 'Sania Rashid',
+            major: 'Computer Science',
+            hobby: 'Playing Chess',
+            url: 'https://i.imgur.com/Q9WPlWA.jpeg'
         },
         {
-          name: 'Jared Dunn',
-          url: './img/jared.jpg'
+            name: 'Jessica Parker',
+            major: 'Journalism',
+            hobby: 'Painting and Sculpting',
+            url: 'https://i.imgur.com/Q9WPlWA.jpeg'
         },
         {
-          name: 'Dinesh Chugtai',
-          url: './img/dinesh.jpg'
+            name: 'Samantha Stevens',
+            major: 'Computer Science',
+            hobby: 'Playing Basketball',
+            url: 'https://i.imgur.com/Q9WPlWA.jpeg'
         }
       ]
     const [lastDirection, setLastDirection] = useState()
@@ -43,15 +53,25 @@ const Dashboard = () => {
     return (
         <div className='dashboard'>
             
-            {/* <ChatContainer/> */}
-            <div className='swiper-container'>
-                <div className='card-container'>
+            <ChatContainer/>
+            <div className="swipe-container">
+                <div className="card-container">
                     {characters.map((character) =>
-                    <TinderCard className='swipe' key={character.name} onSwipe={(dir) => swiped(dir, character.name)} onCardLeftScreen={() => outOfFrame(character.name)}>
-                    <div style={{ backgroundImage: 'url(' + character.url + ')' }} className='card'>
-                    <h3>{character.name}</h3>
+                    <TinderCard 
+                    className='swipe' 
+                    key={character.name} 
+                    onSwipe={(dir) => swiped(dir, character.name)} 
+                    onCardLeftScreen={() => outOfFrame(character.name)}>
+                <div style={{ backgroundImage: 'url(' + character.url + ')' }} className='card'>
+                    <h3 className="name">{character.name}</h3>
+                    <div className="carousel-info">
+                        <p>{character.major}</p>
+                        <p>{character.hobby}</p>
                     </div>
-                     </TinderCard>
+                </div>
+
+
+                    </TinderCard>
                 )}
                 <div className="swipe-info">
                     {lastDirection ? <p>You Swiped {lastDirection}</p> : <p/>}
