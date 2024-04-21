@@ -9,23 +9,23 @@ const Dashboard = () => {
     const characters = [
         {
           name: 'Richard Hendricks',
-          url: './img/richard.jpg'
+          url: 'https://i.imgur.com/Q9WPlWA.jpeg'
         },
         {
           name: 'Erlich Bachman',
-          url: './img/erlich.jpg'
+          url: 'https://news.umanitoba.ca/wp-content/uploads/2019/03/IMG_9991-1200x800.jpg'
         },
         {
           name: 'Monica Hall',
-          url: './img/monica.jpg'
+          url: 'https://i.imgur.com/Q9WPlWA.jpeg'
         },
         {
           name: 'Jared Dunn',
-          url: './img/jared.jpg'
+          url: 'https://i.imgur.com/Q9WPlWA.jpeg'
         },
         {
           name: 'Dinesh Chugtai',
-          url: './img/dinesh.jpg'
+          url: 'https://i.imgur.com/Q9WPlWA.jpeg'
         }
       ]
     const [lastDirection, setLastDirection] = useState()
@@ -43,15 +43,20 @@ const Dashboard = () => {
     return (
         <div className='dashboard'>
             
-            {/* <ChatContainer/> */}
-            <div className='swiper-container'>
-                <div className='card-container'>
+            <ChatContainer/>
+            <div className="swipe-container">
+                <div className="card-container">
                     {characters.map((character) =>
-                    <TinderCard className='swipe' key={character.name} onSwipe={(dir) => swiped(dir, character.name)} onCardLeftScreen={() => outOfFrame(character.name)}>
-                    <div style={{ backgroundImage: 'url(' + character.url + ')' }} className='card'>
-                    <h3>{character.name}</h3>
-                    </div>
-                     </TinderCard>
+                    <TinderCard 
+                    className='swipe' 
+                    key={character.name} 
+                    onSwipe={(dir) => swiped(dir, character.name)} 
+                    onCardLeftScreen={() => outOfFrame(character.name)}>
+                        <div style={{ backgroundImage: 'url(' + character.url + ')' }} 
+                            className='card'
+                        ><h3>{character.name}</h3>
+                        </div>
+                    </TinderCard>
                 )}
                 <div className="swipe-info">
                     {lastDirection ? <p>You Swiped {lastDirection}</p> : <p/>}
