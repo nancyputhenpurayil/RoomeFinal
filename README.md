@@ -1,1 +1,4 @@
 # RoomeFinal
+
+ROOME, a fun take on the combination of “roomie” and “room me”, tackles the challenge that many first-year college students face when searching for a dorm roommate. Originating from our own struggles as out-of-state students, we found existing options like Instagram and StarRez inefficient and limited. Instagram's process is convoluted, while StarRez relies on basic questions that hardly reflect personal compatibility. ROOME stands out by leveraging detailed user profiles, including niche interests, majors, and desired roommate qualities, to facilitate matches similar to how Tinder's algorithm works. Additionally, recognizing the frequent posts on our UMD Snapchat story about needing roommates for off-campus housing or handling lease takeovers, we intend to integrate features to address these needs in one streamlined platform.
+
